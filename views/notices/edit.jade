@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1 Edit
+	p Welcome to Update Notice
+	form(name="notice", action="/admin/notices/" + notice._id, method="post")
+		input(type="hidden", name="_method", value="PUT")
+		input(type="text", name="title", value=notice.title)
+		input(type="text", name="subTitle", value=notice.subTitle)
+		input(type="text", name="content", value=notice.content)
+		input(type="text", name="imageUrl" value=notice.imageUrl)
+		input(type="submit", value="Enviar")

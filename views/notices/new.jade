@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1 New
+  p Welcome to New Notice
+  form(name="notice", action="/admin/notices", method="post")
+      input(type="text", name="title")
+      input(type="text", name="subTitle")
+      input(type="text", name="content")
+      input(type="text", name="imageUrl")
+      input(type="submit", value="Enviar")
