@@ -8,11 +8,9 @@ var path = require('path');
 var http = require('http');
 var fs = require('fs');
 
-// system variables 
-var config = require('./config/config'),
-    mongoose = require('mongoose');
-
 // db connection
+var config = require('./config/config');
+var mongoose = require('mongoose');
 var db = mongoose.connect(config.db);
 
 var app = express();
